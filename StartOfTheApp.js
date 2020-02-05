@@ -22,11 +22,19 @@ const costs = [ {name:"Rent", amount:270.25, span:costSpan[2]},
 
 const totalRent = function(){
     costSpan.forEach(val => {
-       let rent = `${val.days}` * `${costs[0].amount}` / `${costSpan[2].days}`
-    console.log(rent.toFixed(2));
+    let rent = `${val.days}` * `${costs[0].amount}` / `${costSpan[2].days}`
+    console.log(`The  ${val.span} rent cost is ${rent.toFixed(2)}`);
     })
 }
+const totalFoodCost = function(){
+    costSpan.forEach(val => {
+        let rent = `${val.days}` * `${costs[1].amount}`;
+        console.log(`The  ${val.span} ${costs[1].name} cost is ${rent.toFixed(2)}`);
+        })
+}
+
 totalRent();
+totalFoodCost();
 
 
 
